@@ -1,7 +1,7 @@
 with open('6-input.txt','r') as file:
     rows = [line.strip('\n') for line in file] # must keep trailing whitespace for Part 2; only remove newlines
     operators = rows[-1].split()
-    # Parse Part 1 Human Operands
+    # Parse Part 1 Human Operands... could also invert this list to use the same calculation for Parts 1 & 2
     human_operands = [list(map(int,row.split())) for row in rows[:-1]]
     # Parse Part 2 Cephalopod Operands
     R = len(rows[:-1])
