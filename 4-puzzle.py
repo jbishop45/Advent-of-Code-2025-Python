@@ -38,9 +38,9 @@ while continue_searching:
     for row, line in enumerate(grid):
         for col, _ in enumerate(line):
             if (get_adjacent(grid, row, col).count('@') < 4) and grid[row][col]=='@':
-                grid[row][col] = '.' # need to do this all at the end of the iteration if I want this to work for Part 1 again
                 rolls += 1
                 if recursive_search:
+                    grid[row][col] = '.'
                     continue_searching = True
 
 print(rolls)
